@@ -1,0 +1,42 @@
+{
+  "name": "zk-circuits",
+  "version": "2.0.0",
+  "description": "Railgun-style ZK circuits for Solana privacy payments with range checks and security improvements",
+  "main": "index.js",
+  "scripts": {
+    "test": "node scripts/test_negative.js",
+    "make:vectors": "node scripts/make_vectors.js",
+    "make:vectors:enhanced": "node scripts/make_vectors_enhanced.js",
+    "test:negative": "node scripts/test_negative.js",
+    "export:vk": "node scripts/export_vk.js",
+    "build:circuits": "make compile",
+    "build:all": "make all",
+    "prove:shield": "make prove-shield",
+    "prove:transfer": "make prove-transfer",
+    "prove:unshield": "make prove-unshield",
+    "prove:all": "make prove-all",
+    "prove:all:fast": "make prove-all-fast",
+    "clean": "make clean",
+    "info": "make info"
+  },
+  "keywords": [
+    "zero-knowledge",
+    "circom",
+    "groth16",
+    "solana",
+    "privacy",
+    "zk-snarks",
+    "range-checks",
+    "bn254"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "circomlibjs": "^0.1.7",
+    "snarkjs": "^0.7.5"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5"
+  }
+}

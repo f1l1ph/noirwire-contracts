@@ -1,0 +1,5 @@
+{
+  "recipient_pk": "123456789",
+  "amount": "1000",
+  "blinding": "42"
+}

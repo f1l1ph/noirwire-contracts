@@ -1,0 +1,18 @@
+# Build artifacts
+build/
+*.log
+*.wtns
+
+# Powers of Tau (large files)
+pot/*.ptau
+
+# Node modules
+node_modules/
+
+# System files
+.DS_Store
+*~
+
+# IDE
+.vscode/
+.idea/
