@@ -7,6 +7,7 @@ skip-lint = false
 
 [programs.localnet]
 noirwire_contracts = "6vySUQGyA67t7UtXKuauvn5QHZscj9fG26SZegq7UnCf"
+zk_pool = "Hza5rjYmJnoYsjsgsuxLkyxLoWVo6RCUZxCB3x17v8qz"
 
 [registry]
 url = "https://api.apr.dev"
