@@ -65,7 +65,7 @@ pub fn set_verification_key(
     vk_account.vk_data = vk_data;
     vk_account.vk_hash = vk_hash;
     vk_account.bump = ctx.bumps.vk_account;
-    
+
     // Validate n_public matches circuit expectations
     vk_account.validate_n_public()?;
 

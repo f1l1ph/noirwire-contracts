@@ -1,5 +1,3 @@
-use anchor_lang::prelude::*;
-
 /// Maximum Merkle tree depth supported
 pub const MAX_MERKLE_DEPTH: u8 = 32;
 

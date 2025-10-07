@@ -9,12 +9,16 @@ skip-lint = false
 noirwire_contracts = "6vySUQGyA67t7UtXKuauvn5QHZscj9fG26SZegq7UnCf"
 zk_pool = "Hza5rjYmJnoYsjsgsuxLkyxLoWVo6RCUZxCB3x17v8qz"
 
+[programs.devnet]
+noirwire_contracts = "6vySUQGyA67t7UtXKuauvn5QHZscj9fG26SZegq7UnCf"
+zk_pool = "Hza5rjYmJnoYsjsgsuxLkyxLoWVo6RCUZxCB3x17v8qz"
+
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
-wallet = "~/.config/solana/id.json"
+cluster = "devnet"
+wallet = "~/.config/solana/devnet-wallet.json"
 
 [scripts]
 test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 \"tests/**/*.ts\""

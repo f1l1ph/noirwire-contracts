@@ -1,0 +1,80 @@
+{
+  "deployment": {
+    "network": "devnet",
+    "rpcEndpoint": "https://api.devnet.solana.com",
+    "deployedAt": "2025-10-07T17:41:00Z",
+    "deployer": "42UU1MVEAT3tsD3EuzsHaQSWsXJ4M5MyDGRMmNSrsdHL"
+  },
+  "programs": {
+    "zkPool": {
+      "programId": "Hza5rjYmJnoYsjsgsuxLkyxLoWVo6RCUZxCB3x17v8qz",
+      "programDataAddress": "EXWyoJ62aHA6ui5TDzv8ZQphLQWyj5jxPoCmqUw2RAbj",
+      "idlAccount": "7sujPS7pdgf4h5TLDKAArbC3UqugZMKJPKQRs4B6NQvu",
+      "upgradeAuthority": "42UU1MVEAT3tsD3EuzsHaQSWsXJ4M5MyDGRMmNSrsdHL",
+      "size": 424176,
+      "rentReserve": "2.95346904 SOL",
+      "lastDeployedSlot": 412988620,
+      "deploymentSignature": "3H99Y5RPQ7jBoH7HpX8n29MJGtu6ppCcwEmDR5MoTdEgzixRG9AvyeeF1F8YbX5KqZm62FPnixSwdPmiNnMdSuwM",
+      "explorerUrl": "https://explorer.solana.com/address/Hza5rjYmJnoYsjsgsuxLkyxLoWVo6RCUZxCB3x17v8qz?cluster=devnet",
+      "keypairPath": "target/deploy/zk_pool-keypair.json"
+    },
+    "noirwireContracts": {
+      "programId": "6vySUQGyA67t7UtXKuauvn5QHZscj9fG26SZegq7UnCf",
+      "idlAccount": "G3WEAhW97AGtjDbTwBBDD1dJZ5BWK3zncUssNt1qvRYB",
+      "upgradeAuthority": "42UU1MVEAT3tsD3EuzsHaQSWsXJ4M5MyDGRMmNSrsdHL",
+      "deploymentSignature": "5QZLjwJmbDMV4LuQaNPKPmJYMcEnzkaYVKC4WsfZjgSuc12ygX1NNtRv13sLUHdT8DstgMRinQMF2K2HLWay4PCM",
+      "explorerUrl": "https://explorer.solana.com/address/6vySUQGyA67t7UtXKuauvn5QHZscj9fG26SZegq7UnCf?cluster=devnet",
+      "keypairPath": "target/deploy/noirwire_contracts-keypair.json"
+    }
+  },
+  "accounts": {
+    "configPDA": {
+      "description": "Pool configuration account",
+      "seeds": ["config"],
+      "initialized": false
+    },
+    "rootsPDA": {
+      "description": "Merkle roots ring buffer",
+      "seeds": ["roots"],
+      "initialized": false
+    },
+    "nullifiersPDA": {
+      "description": "Nullifier tracking account",
+      "seeds": ["nullifiers", "<shard_index>"],
+      "initialized": false
+    },
+    "treasuryPDA": {
+      "description": "Program treasury for withdrawals",
+      "seeds": ["treasury"],
+      "initialized": false
+    },
+    "verificationKeyPDA": {
+      "description": "Verification keys for circuits",
+      "seeds": ["vk", "<circuit_type>"],
+      "circuits": {
+        "shield": 0,
+        "transfer": 1,
+        "unshield": 2
+      },
+      "initialized": false
+    }
+  },
+  "configuration": {
+    "merkleDepth": 20,
+    "maxNotes": 1048576,
+    "rootWindowSize": 64,
+    "nullifierShardCapacity": 100000,
+    "circuits": ["shield", "transfer", "unshield"]
+  },
+  "status": {
+    "deployed": true,
+    "initialized": false,
+    "verificationKeysUploaded": false,
+    "readyForTransactions": false
+  },
+  "nextSteps": [
+    "Initialize pool with: make init-devnet",
+    "Upload verification keys with: make upload-vk-devnet",
+    "Test deployment with: anchor test --skip-build --skip-deploy --provider.cluster devnet"
+  ]
+}

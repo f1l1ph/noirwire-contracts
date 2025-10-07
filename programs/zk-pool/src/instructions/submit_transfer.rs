@@ -45,7 +45,7 @@ pub fn submit_transfer(
 ) -> Result<()> {
     // Check pool is not paused
     require!(!ctx.accounts.config.paused, ZkPoolError::PoolPaused);
-    
+
     // Validate public input count (transfer expects 4: root, nullifier, new_commitment, fee)
     require!(
         public_inputs.len() == TRANSFER_PUBLIC_INPUTS,
@@ -57,7 +57,7 @@ pub fn submit_transfer(
         ctx.accounts.vk_account.vk_hash == ctx.accounts.config.vk_hashes.transfer,
         ZkPoolError::VkHashMismatch
     );
-    
+
     // Verify VK is set (not zero hash)
     require!(
         ctx.accounts.config.vk_hashes.transfer != [0u8; 32],

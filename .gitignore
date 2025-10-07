@@ -1,7 +1,48 @@
+# Anchor
 .anchor
-.DS_Store
 target
-**/*.rs.bk
-node_modules
 test-ledger
+
+# Rust
+**/*.rs.bk
+*.bak
+Cargo.lock.bak
+rust-toolchain.toml.bak
+
+# Node
+node_modules
 .yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+*.so
+*.dylib
+*.rlib
+*.d
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

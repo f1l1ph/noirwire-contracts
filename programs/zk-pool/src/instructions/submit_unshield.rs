@@ -4,7 +4,6 @@ use crate::events::{NullifierSpent, Unshielded};
 use crate::state::*;
 use crate::verifier::verify_proof;
 use anchor_lang::prelude::*;
-use anchor_lang::system_program::{transfer, Transfer};
 
 #[derive(Accounts)]
 pub struct SubmitUnshield<'info> {

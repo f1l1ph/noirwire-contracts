@@ -23,6 +23,7 @@ pub struct AddRoot<'info> {
     #[account(mut)]
     pub authority: Signer<'info>,
 
+    /// CHECK: Admin account is validated through has_one constraint on config
     pub admin: UncheckedAccount<'info>,
 
     pub system_program: Program<'info, System>,
